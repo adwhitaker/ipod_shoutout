@@ -54,9 +54,8 @@ $(document).ready(function(){
           });
         })
         function nextPerson() {
-        	timer = setTimeout(function() { $("#next").click(); nextPerson() }, 5000);
+        	timer = setTimeout(function() { $("#next").click(); nextPerson() }, 10000);
         }
-
         nextPerson();
       } // end of success
     }); // end of AJAX
@@ -66,7 +65,7 @@ $(document).ready(function(){
 function printPerson(person) {
   var $personDiv = $('<div class="person"></div>');
   $personDiv.append('<h2>' + person.name + '</div>');
-  $personDiv.append('<p>' + person.githubUserName + '</div>');
+  $personDiv.append('<p><span class="github">github@ </span>' + person.githubUserName + '</div>');
   $personDiv.append('<p>' + person.shoutout + '</div>');
 
   $('#shoutout-person').append($personDiv);

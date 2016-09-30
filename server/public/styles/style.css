@@ -1,14 +1,63 @@
+body {
+  text-align: center;
+  background-color: black;
+  color: floralwhite;
+}
+section {
+  border: floralwhite solid 2px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 50%;
+}
+.github {
+  color: grey;
+}
+.counterDiv {
+  /*border: floralwhite solid 2px;*/
+  display: inline-block;;
+}
+#border {
+  border: floralwhite solid 2px;
+}
+#shoutout-person {
+  text-align: left;
+  padding: 10px;
+  word-wrap: normal;
+  height: 200px
+}
+.counter {
+  margin: 0 auto;
+}
+.clear {
+  clear: both;
+}
 .box {
   height: 20px;
   width: 20px;
-  border: black solid 2px;
+  border: floralwhite solid 2px;
   float: left;
+  margin: 5px 1px 5px 1px;
 }
 
 .boxColor {
-  background-color: red;
+  background-color: limegreen;
 }
 
 .person {
+  padding: 10px;
   display: none;
+}
+.buttons {
+  text-align: center;
+}
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* IE6&7 */
 }
