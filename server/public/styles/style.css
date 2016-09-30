@@ -5,6 +5,7 @@ body {
 }
 section {
   border: floralwhite solid 2px;
+  border-radius: 20px;
   padding: 20px;
   margin: 0 auto;
   width: 50%;
@@ -13,11 +14,12 @@ section {
   color: grey;
 }
 .counterDiv {
-  /*border: floralwhite solid 2px;*/
-  display: inline-block;;
+  display: inline-block;
 }
 #border {
   border: floralwhite solid 2px;
+  border-radius: 10px;
+
 }
 #shoutout-person {
   text-align: left;
@@ -37,6 +39,7 @@ section {
   border: floralwhite solid 2px;
   float: left;
   margin: 5px 1px 5px 1px;
+  border-radius: 20px;
 }
 
 .boxColor {
