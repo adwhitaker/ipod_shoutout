@@ -4,11 +4,15 @@ body {
   color: floralwhite;
 }
 section {
+  color: black;
   border: floralwhite solid 2px;
   border-radius: 20px;
   padding: 20px;
   margin: 0 auto;
-  width: 50%;
+  height: 600px;
+  width: 550px;
+  background-color: white;
+  border: lightgrey solid 2px;
 }
 .github {
   color: grey;
@@ -17,15 +21,36 @@ section {
   display: inline-block;
 }
 #border {
-  border: floralwhite solid 2px;
+  border: lightgrey solid 2px;
   border-radius: 10px;
+  height: 300px;
+  background-color: floralwhite;
 
 }
+#photoDiv {
+  float: left;
+  height: 200px;
+  width: 200px;
+  margin-top: 25px;
+}
+img {
+  margin-top: 10px;
+  /*height: 150px;*/
+  width: 150px;
+}
+/*p {
+  margin-top: 50px;
+  float: left;
+  display: inline-block;
+}*/
 #shoutout-person {
   text-align: left;
-  padding: 10px;
+  padding: 5px;
   word-wrap: normal;
-  height: 200px
+  width: 320px;
+  float:left;
+  margin-top: 25px;
+
 }
 .counter {
   margin: 0 auto;
@@ -36,7 +61,7 @@ section {
 .box {
   height: 20px;
   width: 20px;
-  border: floralwhite solid 2px;
+  border: lightgrey solid 2px;
   float: left;
   margin: 5px 1px 5px 1px;
   border-radius: 20px;
@@ -50,8 +75,17 @@ section {
   padding: 10px;
   display: none;
 }
+button {
+  margin: 35px;
+  background-color: lightgrey;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  font-size: 20px
+}
 .buttons {
+  background-color: lightgrey
   text-align: center;
+  margin: 75px;
 }
 .group:before, .group:after {
   content: "";

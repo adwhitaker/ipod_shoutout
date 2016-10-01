@@ -53,6 +53,19 @@ $(document).ready(function(){
 
           });
         })
+
+        $('.box').on('click', function() {
+          currentPerson = $(this).data('boxPerson');
+          $('.person').fadeOut('slow', function (){
+            clearTimeout(timer);
+            $(this).remove();
+            console.log(currentPerson);
+            printPerson(personShoutout[currentPerson]);
+            progressBar(personShoutout, currentPerson);
+            nextPerson();
+          });
+        })
+
         function nextPerson() {
         	timer = setTimeout(function() { $("#next").click(); nextPerson() }, 10000);
         }
@@ -68,6 +81,7 @@ function printPerson(person) {
   $personDiv.append('<p><span class="github">github@ </span>' + person.githubUserName + '</div>');
   $personDiv.append('<p>' + person.shoutout + '</div>');
 
+  // $('#photo').append('<img src="' + person.imageURL + '" />')
   $('#shoutout-person').append($personDiv);
   $personDiv.fadeIn('slow');
 }
@@ -76,7 +90,9 @@ function printPerson(person) {
 function progressBar(peopleArray, currentPerson) {
   $('.box').remove();
   for (var i = 0; i < peopleArray.length; i++) {
-    $('.counter').append('<div class="box"></div>');
+    var $box = $('<div class="box"></div>');
+    $box.data('boxPerson', i);
+    $('.counter').append($box);
     if (i <= currentPerson) {
       $('.box').addClass('boxColor');
     }
