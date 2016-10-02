@@ -7,8 +7,7 @@ $(document).ready(function(){
       type: "GET",
       url: "/data",
       success: function(data){
-        // console.log(data);
-        // name, githubUserName, shoutout
+        // data: name, githubUserName, shoutout
 
         // this puts each person into an index of the personShoutout array;
         data.forEach(function(person) {
@@ -54,22 +53,23 @@ $(document).ready(function(){
           });
         })
 
-        $('.box').on('click', function() {
+        // event listener to jump ahead or back to the counter box clicked on
+        $('.counter').on('click', '.box', function() {
           currentPerson = $(this).data('boxPerson');
           $('.person').fadeOut('slow', function (){
             clearTimeout(timer);
             $(this).remove();
-            console.log(currentPerson);
             printPerson(personShoutout[currentPerson]);
             progressBar(personShoutout, currentPerson);
             nextPerson();
           });
         })
 
+        // 10 second timer to change to next shoutout if no button is clicked
         function nextPerson() {
         	timer = setTimeout(function() { $("#next").click(); nextPerson() }, 10000);
         }
-        nextPerson();
+        nextPerson(); // initial nextPerson
       } // end of success
     }); // end of AJAX
 }); // end of $(function )
@@ -81,7 +81,6 @@ function printPerson(person) {
   $personDiv.append('<p><span class="github">github@ </span>' + person.githubUserName + '</div>');
   $personDiv.append('<p>' + person.shoutout + '</div>');
 
-  // $('#photo').append('<img src="' + person.imageURL + '" />')
   $('#shoutout-person').append($personDiv);
   $personDiv.fadeIn('slow');
 }
