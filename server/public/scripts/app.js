@@ -74,7 +74,7 @@ $(document).ready(function(){
     }); // end of AJAX
 }); // end of $(function )
 
-// prints a shoutout to the page
+// prints a shoutout to the DOM
 function printPerson(person) {
   var $personDiv = $('<div class="person"></div>');
   $personDiv.append('<h2>' + person.name + '</div>');
@@ -85,7 +85,7 @@ function printPerson(person) {
   $personDiv.fadeIn('slow');
 }
 
-// adds progress bar to page
+// adds progress bar to DOM
 function progressBar(peopleArray, currentPerson) {
   $('.box').remove();
   for (var i = 0; i < peopleArray.length; i++) {
